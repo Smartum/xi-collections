@@ -24,5 +24,8 @@
         "psr-0": {
             "Xi\\Collections": ["library/", "tests/"]
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
     }
 }

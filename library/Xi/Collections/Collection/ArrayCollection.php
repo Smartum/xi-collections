@@ -124,7 +124,10 @@ class ArrayCollection extends ArrayEnumerable implements Collection
     {
         $values = $this->elements;
         return function($value) use($callback, &$values) {
-            list($key) = each($values);
+            // Leaving the original implementation here as a documentation. Basically PHP 7.2 has deprecated each()
+            // list($key) = each($values);
+            $key = key($values);
+            next($values);
             return $callback($value, $key);
         };
     }
